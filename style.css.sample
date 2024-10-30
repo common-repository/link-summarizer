@@ -1,0 +1,8 @@
+div.link-summarizer {
+        background: #eeeeee;
+        margin-top: 1.5em;
+}
+
+div.link-summarizer li {
+        background: #ffffff;
+}

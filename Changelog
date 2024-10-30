@@ -1,0 +1,143 @@
+Version 1.8.1 (Released 09/08/2009)
+   - feature added:
+      - position of summary can now be choosen above or below the post content
+   - bugs fixed:
+      - some minor bugs in german translation
+
+Version 1.8 (Released 10/05/2009)
+   - bugs fixed:
+      - some characters in the automatic and manual template were escaped
+   - compatibility upgrade:
+      - settings page updated for compatibility with WP >= 2.7
+        (register_setting and settings_fields may soon be mandatory in WP)
+
+Version 1.7a (Released 08/05/2009)
+   - bugs fixed:
+      - fixed formatting in admin interface
+      - added possibility to disable/enable the display the link summary on
+        the index page and in RSS feeds on a per post basis, reported by
+		Thorsten Luhm
+   - feature added:
+      - Link Summarizer uses localizations, at the moment only english
+	    (default language) and german are available
+		If you wan't to contribute a translation for your locale please
+		contact me at chris@team-erdle.de
+
+Version 1.6.2 (Released 31/05/2009)
+   - feature added:
+      - you now can define the plugin priority through the admin interface if
+	    some other plugins interfere with Link Summarizer
+		Set to something lower than the default to force execution of Link
+		Summarizer before some other plugins, or set to higher value to fore
+		execution after other plugins. Correct values depend on the other
+		plugins you have installed.
+
+Version 1.6.1 (Released 30/09/2008)
+   - bug fixed:
+      - also search for title tag left from href tag
+
+Version 1.6 (Released 29/09/2008)
+   - feature added:
+      - optionally show the contents of the title attribute instead of URL or
+        link text
+   - redesign of plugin settings page according to Wordpress Design Guides
+	
+Version 1.5.5 (Released 01/05/2008)
+   - bug fixed:
+	- corrected upgrade process from older version when settings
+     	  have been added to the plugin options
+   - feature added:
+   	- truncate link text if their length exceeds a specified limit
+
+Version 1.5.4 (Released 22/04/2008)
+   - fixed readme.txt for compatibility with WordPress 2.5.1
+
+Version 1.5.3 (Released 05/04/2008)
+   - bug fixed:
+   	- when using the template function get_link_summary() to display the
+	  summary filters defined for the_content now also get applied here.
+	  This prevents malfunction when using other plugins like Markdown
+	  as there a no <a> tags in the original input as they are generated
+	  from a simplified markup language.
+
+Version 1.5.2 (Released 10/03/2008)
+   - bug fixed:
+        - the configuration option for lnsum_onlyloopshow (omit changing the content via
+          filter, only allow the template tag) (ticket #763)
+	- new configuration options included in later versions than the one
+	  originally installed now get predefined with sane defaults
+
+Version 1.5.1 (Released 28/02/2008)
+   - bugs fixed:
+   	- correctly return $content instead of echoing out, thanks to
+	  P. Hofmann of contaxe.com
+   - further code cleanup to reflect wordpress coding style
+
+Version 1.5 (Released 11/02/2008)
+   - features added:
+      - the layout of the plugin putput is now completely configurable through the admin
+        interface, there's no mor need to manually edit the plugin source code to change
+        the output (for both filter and template access modes)
+   - code cleanup for easier maintenance
+
+Version 1.4.2 (Released 09/11/2007)
+   - features added:
+      - plugin can now be called directly from template files ("the loop")
+        to respect special design concepts (idea: Christer Fallström)
+      - you can now choose between case sensitive and case insensitive matching
+        for excluding links from the summary (idea: Kela)
+      - you can now choose if you want to show the link summary if the post is retrieved
+        as RSS feed (idea and code: Kela)
+
+Version 1.4.1 (Released 08/11/2007)
+   - bug fixed: wrong HTML tag eliminated in output
+   - features added:
+      - design of the summary can now be styled using CSS
+        insert something like the following into your theme style sheet
+			div.link-summarizer {
+        			background: #eeeeee;
+			}
+
+			div.link-summarizer li {
+	        		background: #ffffff;
+			}
+      - option in admin panel to show URL or link text in summary (idea: Christer Fallström)
+	
+Version 1.4 (Released 27/08/2007)
+   - bug fixed: Link Summarizer is now aware of url rewriting (thanks to
+                Thomas Ohms for pointing out, implementing and testing)
+   - minor patch: replaced manual $wpdb connection in favour of the WP
+                  function get_post_custom_values I wasn't aware of (also
+		  thanks to Thomas Ohms)
+
+Version 1.3.1 (Released 15/08/2007)
+   - bug fixed: "Update options" button not showing (thanks to John Pickett)
+
+Version 1.3 (Released 04/08/2007)
+   - Major problems addressed:
+      - Check if the regex setting is empty
+   - Minor problems addressed:
+      - New default setting for the regular expression: all links matching ^#.* 
+        ("local anchors") are now hidden
+      - Grown the regex input textarea from 3 to 8 rows
+   - Features added:
+      - In the admin panel now the settings for Link Summarizer can be deleted
+      - If a link is mentioned multiple times, it is only shown once, in the
+        order, where it was when first occured
+
+Version 1.2.1 (Released 02/08/2007)
+   - Features added:
+      - Added support for switching regex engines, POSIX and PCRE supported
+	
+Version 1.2 (Released 02/08/2007)
+   - Feature added:
+      - Added the possibility to enable/disable the summary on the index page
+
+Version 1.1 (Released 01/08/2007)
+   - Feature added:
+      - Added the possibility of enabling/disabling the summary for specific
+	posts using custom flags (set lnsum_show to 0 to disable, anything
+	other to enable)
+ 
+Version 1.0 (Released 31/07/2007):
+   - Initial release of the plugin
